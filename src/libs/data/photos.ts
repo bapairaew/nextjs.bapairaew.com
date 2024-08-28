@@ -44,24 +44,27 @@ const getPhotoDataFromCache = (path: string) =>
   fs.promises.readFile(path).then((r) => JSON.parse(r.toString()));
 
 export const getPhotoData = async (path: string): Promise<Photo> => {
-  const [exif, blurDataURL] = await Promise.all([
-    fs.promises.readFile(path).then(exifr.parse),
+  const [exifrData, blurDataURL] = await Promise.all([
+    exifr.parse(path),
     getBlurDataURL(path),
   ]);
   const slug = parse(path).name;
-  const placeParts = exif.ImageDescription?.split(", ");
+  const placeParts = exifrData.ImageDescription?.split(", ");
 
   const data: Photo = {
     slug,
     place: [placeParts[0], placeParts.pop()].join(", "),
-    date: exif.DateTimeOriginal?.toJSON() || exif.CreateDate?.toJSON() || null,
-    camera: exif.Model ? exif.Model : null,
-    fnumber: exif.FNumber,
-    iso: exif.ISO,
-    focalLength: exif.FocalLength,
-    exposureTime: exif.ExposureTime,
-    width: exif.ExifImageWidth, // Does not provide correct dimension
-    height: exif.ExifImageHeight, // Does not provide correct dimension
+    date:
+      exifrData.DateTimeOriginal?.toJSON() ||
+      exifrData.CreateDate?.toJSON() ||
+      null,
+    camera: exifrData.Model ? exifrData.Model : null,
+    fnumber: exifrData.FNumber,
+    iso: exifrData.ISO,
+    focalLength: exifrData.FocalLength,
+    exposureTime: exifrData.ExposureTime,
+    width: exifrData.ExifImageWidth, // Does not provide correct dimension
+    height: exifrData.ExifImageHeight, // Does not provide correct dimension
     blurDataURL,
   };
 
