@@ -1,6 +1,6 @@
-import PostCard from "@/components/cards/PostCard";
 import { getPosts } from "@/libs/data/posts";
 import { Link } from "react-transition-progress/next";
+import PostCard from "./PostCard";
 
 export default async function PostsSection() {
   const posts = (await getPosts()).slice(0, 6);

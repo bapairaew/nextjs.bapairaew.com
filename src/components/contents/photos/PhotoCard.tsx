@@ -1,8 +1,8 @@
+import Card, { CardProps } from "@/components/cards/Card";
+import CardOverlayAnchor from "@/components/cards/CardOverlayAnchor";
 import { FilledImage } from "@/components/images/FilledImage";
 import { Photo } from "@/libs/data/photos";
 import dateformat from "dateformat";
-import Card, { CardProps } from "./Card";
-import CardOverlayAnchor from "./CardOverlayAnchor";
 
 type PhotoCardProps = CardProps & {
   photo: Photo;

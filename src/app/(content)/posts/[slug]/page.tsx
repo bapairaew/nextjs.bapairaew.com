@@ -1,4 +1,4 @@
-import PostContent from "@/components/contents/singles/PostContent";
+import PostContent from "@/components/contents/posts/PostContent";
 import { getPosts } from "@/libs/data/posts";
 import { Metadata } from "next";
 import { Link } from "react-transition-progress/next";

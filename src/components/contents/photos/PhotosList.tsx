@@ -1,4 +1,4 @@
-import PhotoCard from "@/components/cards/PhotoCard";
+import PhotoCard from "./PhotoCard";
 import { getPhotos } from "@/libs/data/photos";
 
 export default async function PhotosList() {

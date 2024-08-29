@@ -1,5 +1,5 @@
-import Card, { CardProps } from "./Card";
-import CardOverlayAnchor from "./CardOverlayAnchor";
+import Card, { CardProps } from "@/components/cards/Card";
+import CardOverlayAnchor from "@/components/cards/CardOverlayAnchor";
 import { Post } from "@/libs/data/posts";
 import dateformat from "dateformat";
 

@@ -1,6 +1,6 @@
-import PhotoCard from "@/components/cards/PhotoCard";
 import { getPhotos } from "@/libs/data/photos";
 import { Link } from "react-transition-progress/next";
+import PhotoCard from "./PhotoCard";
 
 export default async function PhotosSection() {
   const photos = (await getPhotos()).slice(0, 8);

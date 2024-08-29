@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/cards/ProjectCard";
+import ProjectCard from "@/components/contents/projects/ProjectCard";
 import { getProjects } from "@/libs/data/projects";
 
 export default async function ProjectsList() {

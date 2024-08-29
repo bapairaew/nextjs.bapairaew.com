@@ -1,4 +1,4 @@
-import ProjectContent from "@/components/contents/singles/ProjectContent";
+import ProjectContent from "@/components/contents/projects/ProjectContent";
 import { getProjects } from "@/libs/data/projects";
 import { Metadata } from "next";
 import { Link } from "react-transition-progress/next";

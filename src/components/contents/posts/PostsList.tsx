@@ -1,5 +1,5 @@
-import PostCard from "@/components/cards/PostCard";
 import { getPosts } from "@/libs/data/posts";
+import PostCard from "./PostCard";
 
 export default async function PostsList() {
   const posts = await getPosts();

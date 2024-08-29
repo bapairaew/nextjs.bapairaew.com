@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/cards/ProjectCard";
+import ProjectCard from "./ProjectCard";
 import { getProjects } from "@/libs/data/projects";
 import { Link } from "react-transition-progress/next";
 

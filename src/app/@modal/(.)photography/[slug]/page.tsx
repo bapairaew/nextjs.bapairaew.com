@@ -1,4 +1,4 @@
-import PhotoContent from "@/components/contents/singles/PhotoContent";
+import PhotoContent from "@/components/contents/photos/PhotoContent";
 
 type Props = { params: { slug: string } };
 

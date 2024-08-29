@@ -1,4 +1,4 @@
-import PostContent from "@/components/contents/singles/PostContent";
+import PostContent from "@/components/contents/posts/PostContent";
 
 type Props = { params: { slug: string } };
 

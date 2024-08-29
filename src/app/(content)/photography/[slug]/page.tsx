@@ -1,4 +1,4 @@
-import PhotoContent from "@/components/contents/singles/PhotoContent";
+import PhotoContent from "@/components/contents/photos/PhotoContent";
 import { getPhotos } from "@/libs/data/photos";
 import dateformat from "dateformat";
 import { Metadata } from "next";

@@ -1,4 +1,4 @@
-import PostsList from "@/components/contents/lists/PostsList";
+import PostsList from "@/components/contents/posts/PostsList";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

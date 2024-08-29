@@ -1,4 +1,4 @@
-import ProjectContent from "@/components/contents/singles/ProjectContent";
+import ProjectContent from "@/components/contents/projects/ProjectContent";
 
 type Props = { params: { slug: string } };
 

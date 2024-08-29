@@ -1,6 +1,6 @@
 import { Project } from "@/libs/data/projects";
-import Card, { CardProps } from "./Card";
-import CardOverlayAnchor from "./CardOverlayAnchor";
+import Card, { CardProps } from "@/components/cards/Card";
+import CardOverlayAnchor from "@/components/cards/CardOverlayAnchor";
 
 type ProjectCardProps = CardProps & {
   project: Project;

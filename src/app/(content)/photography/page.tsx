@@ -1,4 +1,4 @@
-import PhotosList from "@/components/contents/lists/PhotosList";
+import PhotosList from "@/components/contents/photos/PhotosList";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

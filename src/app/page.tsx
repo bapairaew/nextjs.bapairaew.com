@@ -1,7 +1,7 @@
-import PhotosSection from "@/components/contents/sections/PhotosSection";
-import PostsSection from "@/components/contents/sections/PostsSection";
-import ProjectsSection from "@/components/contents/sections/ProjectsSection";
-import HeroSection from "@/components/contents/static/HeroSection";
+import PhotosSection from "@/components/contents/photos/PhotosSection";
+import PostsSection from "@/components/contents/posts/PostsSection";
+import ProjectsSection from "@/components/contents/projects/ProjectsSection";
+import HeroSection from "@/components/contents/hero/HeroSection";
 
 export default async function AboutPage() {
   return (
