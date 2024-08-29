@@ -13,7 +13,7 @@ export type Post = {
   content: string;
 };
 
-export const parsePost = (post: GrayMatterFileWithPath): Post => {
+const parsePost = (post: GrayMatterFileWithPath): Post => {
   return {
     slug: path.parse(post.path).name,
     title: post.data.title,
