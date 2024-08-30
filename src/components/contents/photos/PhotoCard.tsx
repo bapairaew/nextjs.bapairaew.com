@@ -1,6 +1,7 @@
 import Card, { CardProps } from "@/components/cards/Card";
 import CardOverlayAnchor from "@/components/cards/CardOverlayAnchor";
 import { FilledImage } from "@/components/images/FilledImage";
+import { getRemoteImagePath } from "@/libs/data/image";
 import { Photo } from "@/libs/data/photos";
 import dateformat from "dateformat";
 
@@ -16,7 +17,7 @@ export default function PhotoCard({ photo, ...props }: PhotoCardProps) {
         className="object-cover"
         blurDataURL={photo.blurDataURL}
         alt={photo.place}
-        src={`/photos/${photo.slug}.jpeg`}
+        src={getRemoteImagePath(`/photos/${photo.slug}.jpeg`)}
       />
       <div className="p-2">
         <CardOverlayAnchor href={`/photography/${photo.slug}`}>

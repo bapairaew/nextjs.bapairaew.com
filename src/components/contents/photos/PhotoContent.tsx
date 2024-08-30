@@ -1,4 +1,5 @@
 import { FilledImage } from "@/components/images/FilledImage";
+import { getRemoteImagePath } from "@/libs/data/image";
 import { getPhotos } from "@/libs/data/photos";
 import dateformat from "dateformat";
 
@@ -11,7 +12,7 @@ export default async function PhotoContent({ slug }: { slug: string }) {
         className="object-cover"
         blurDataURL={photo.blurDataURL}
         alt={photo.place}
-        src={`/photos/${photo.slug}.jpeg`}
+        src={getRemoteImagePath(`/photos/${photo.slug}.jpeg`)}
       />
       <h1 className="mt-8 text-xl font-black">{photo.place}</h1>
       <dl className="grid grid-cols-2 gap-2 mt-4">
