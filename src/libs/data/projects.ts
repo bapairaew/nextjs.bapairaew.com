@@ -1,4 +1,4 @@
-import { getURL } from "./api";
+import { getURL, revalidate } from "./api";
 
 export type Project = {
   slug: string;
@@ -15,7 +15,8 @@ export type Project = {
 };
 
 export const getProjects = async (slug?: string) => {
-  const res = await fetch(getURL("projects", slug));
+  const res = await fetch(getURL("projects", slug), { next: { revalidate } });
+  if (!res.ok) return [];
   const data: Project[] = await res.json();
   return data;
 };

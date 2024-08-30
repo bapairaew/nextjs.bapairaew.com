@@ -26,8 +26,6 @@ export async function generateStaticParams() {
   }));
 }
 
-export const dynamicParams = false;
-
 export default function PostPage({ params: { slug } }: Props) {
   return (
     <>

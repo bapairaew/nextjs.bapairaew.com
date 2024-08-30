@@ -33,8 +33,6 @@ export async function generateStaticParams() {
   }));
 }
 
-export const dynamicParams = false;
-
 export default function PhotoPage({ params: { slug } }: Props) {
   return (
     <>

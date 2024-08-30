@@ -1,4 +1,4 @@
-import { getURL } from "./api";
+import { getURL, revalidate } from "./api";
 
 export type Photo = {
   slug: string;
@@ -15,7 +15,8 @@ export type Photo = {
 };
 
 export const getPhotos = async (slug?: string) => {
-  const res = await fetch(getURL("photos", slug));
+  const res = await fetch(getURL("photos", slug), { next: { revalidate } });
+  if (!res.ok) return [];
   const data: Photo[] = await res.json();
   return data;
 };
