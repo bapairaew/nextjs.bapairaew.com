@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     ? {
         images: [
           {
-            url: "/api/og",
+            url: "/og.png",
           },
         ],
       }
